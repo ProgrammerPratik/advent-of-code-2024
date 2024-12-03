@@ -7,13 +7,17 @@ public class advent3p1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<String> list = new ArrayList<>();
-        for(int i =0;i<6;i++){
-            list.add(sc.nextLine());
+        while(sc.hasNextLine()){
+            String line = sc.nextLine();
+            if(line.isEmpty()){
+                break;
+            }
+            list.add(line);
         }
 
         Pattern mulPattern = Pattern.compile("mul\\((\\d{1,3}),(\\d{1,3})\\)");
         long totalSum = 0;
-        for(int i = 0;i<6;i++){
+        for(int i = 0;i<list.size();i++){
             Matcher matcher = mulPattern.matcher(list.get(i));
 
 

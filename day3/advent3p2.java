@@ -7,8 +7,12 @@ public class advent3p2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<String> list = new ArrayList<>();
-        for(int i =0;i<6;i++){
-            list.add(sc.nextLine());
+        while(sc.hasNextLine()){
+            String line = sc.nextLine();
+            if(line.isEmpty()){
+                break;
+            }
+            list.add(line);
         }
 
         Pattern instructionPattern = Pattern.compile("do\\(\\)|don't\\(\\)|mul\\(\\s*(\\d{1,3})\\s*,\\s*(\\d{1,3})\\s*\\)");
@@ -16,7 +20,7 @@ public class advent3p2 {
         boolean mul = true;
         long totalSum = 0;
 
-        for(int i =0;i<6;i++){
+        for(int i =0;i<list.size();i++){
 
             Matcher matcher = instructionPattern.matcher(list.get(i));
         while (matcher.find()) {
