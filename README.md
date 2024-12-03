@@ -1,5 +1,5 @@
 # advent-of-code-2024
-This is repo to store my solutions for (advent of code 2024](https://adventofcode.com/) in Java
+This is repo to store my solutions for [advent of code 2024](https://adventofcode.com/) in Java
 
 ## Repository Structure
 there are two solution files in each day (as there are 2 problems each day)
